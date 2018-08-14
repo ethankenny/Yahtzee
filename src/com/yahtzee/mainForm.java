@@ -40,6 +40,18 @@ public class mainForm
     @FXML public Button btnYahtzee;
     @FXML public Button btnChance;
     @FXML public Button btnFirstDie;
+    @FXML public Button btnSecondDie;
+    @FXML public Button btnThirdDie;
+    @FXML public Button btnFourthDie;
+    @FXML public Button btnFifthDie;
+    @FXML public ImageView defaultDieOne;
+    @FXML public ImageView defaultDieTwo;
+    @FXML public ImageView defaultDieThree;
+    @FXML public ImageView defaultDieFour;
+    @FXML public ImageView defaultDieFive;
+    @FXML public ImageView defaultDieSix;
+
+
 
     ArrayList<Button> pointsButtons = new ArrayList<Button>();
 
@@ -74,7 +86,14 @@ public class mainForm
     int fivesInHand = 0;
     int sixesInHand = 0;
 
+    Boolean blnDieOneActive = false;
+    Boolean blnDieTwoActive = false;
+    Boolean blnDieThreeActive = false;
+    Boolean blnDieFourActive = false;
+    Boolean blnDieFiveActive = false;
 
+    ArrayList<Button> dieButtons = new ArrayList<Button>();
+    ArrayList<Boolean> bools = new ArrayList<Boolean>();
 
     public static void main(String[] args) { }
 
@@ -83,8 +102,10 @@ public class mainForm
         if (handsLeft == 13) {
             Collections.addAll(pointsButtons, btnOnes, btnTwos, btnThrees, btnFours, btnFives, btnSixes, btn3OAK,
                     btn4OAK, btnFullHouse, btnSStraight, btnLStraight, btnYahtzee, btnChance);
+        }
 
-            for (Button button: pointsButtons) {
+        if (rollsLeft == 3) {
+            for (Button button : pointsButtons) {
                 button.setDisable(false);
             }
         }
@@ -94,53 +115,208 @@ public class mainForm
         if (rollsLeft == 0)
             btnRollDice.setDisable(true);
 
+        Collections.addAll(dieButtons, btnFirstDie, btnSecondDie, btnThirdDie, btnFourthDie, btnFifthDie);
+        Collections.addAll(bools, blnDieOneActive, blnDieTwoActive, blnDieThreeActive, blnDieFourActive, blnDieFiveActive);
+
+        for (Button button: dieButtons) {
+            button.setDisable(false);
+        }
+
         ArrayList<ImageView> pics = new ArrayList<ImageView>();
         Collections.addAll(pics, imgOne, imgTwo, imgThree, imgFour, imgFive);
+
+        Image priorImageOne = imgOne.getImage();
+        Image priorImageTwo = imgTwo.getImage();
+        Image priorImageThree = imgThree.getImage();
+        Image priorImageFour = imgFour.getImage();
+        Image priorImageFive = imgFive.getImage();
+
+        onesInHand = 0;
+        twosInHand = 0;
+        threesInHand = 0;
+        foursInHand = 0;
+        fivesInHand = 0;
+        sixesInHand = 0;
 
         for (ImageView image: pics) {
             int rNumber = rand.nextInt(6) + 1;
 
             if (rNumber == 1) {
                 image.setImage(new Image("@../../Images/Dice_1.png"));
-                onesInHand++;
+                //onesInHand++;
             } else if (rNumber == 2) {
                 image.setImage(new Image("@../../Images/Dice_2.png"));
-                twosInHand++;
+                //twosInHand++;
             } else if (rNumber == 3) {
                 image.setImage(new Image("@../../Images/Dice_3.png"));
-                threesInHand++;
+                //threesInHand++;
             } else if (rNumber == 4) {
                 image.setImage(new Image("@../../Images/Dice_4.png"));
-                foursInHand++;
+                //foursInHand++;
             } else if (rNumber == 5) {
                 image.setImage(new Image("@../../Images/Dice_5.png"));
-                fivesInHand++;
+                //fivesInHand++;
             } else {
                 image.setImage(new Image("@../../Images/Dice_6.png"));
+                //sixesInHand++;
+            }
+        }
+
+        if (blnDieOneActive) {
+            imgOne.setImage(priorImageOne);
+            /*if (imgOne.getImage() == defaultDieOne.getImage()) {
+                onesInHand++;
+            }*/
+        } if (blnDieTwoActive) {
+            imgTwo.setImage(priorImageTwo);
+        } if (blnDieThreeActive) {
+            imgThree.setImage(priorImageThree);
+        } if (blnDieFourActive) {
+            imgFour.setImage(priorImageFour);
+        } if (blnDieFiveActive) {
+            imgFive.setImage(priorImageFive);
+        }
+
+        for (ImageView image: pics) {
+            String imageURL = image.getImage().impl_getUrl();
+
+            if (imageURL.equals(defaultDieOne.getImage().impl_getUrl())) {
+                onesInHand++;
+            } else if (imageURL.equals(defaultDieTwo.getImage().impl_getUrl())) {
+                twosInHand++;
+            } else if (imageURL.equals(defaultDieThree.getImage().impl_getUrl())) {
+                threesInHand++;
+            } else if (imageURL.equals(defaultDieFour.getImage().impl_getUrl())) {
+                foursInHand++;
+            } else if (imageURL.equals(defaultDieFive.getImage().impl_getUrl())) {
+                fivesInHand++;
+            } else if (imageURL.equals(defaultDieSix.getImage().impl_getUrl())) {
                 sixesInHand++;
             }
         }
 
+        for (Button button: dieButtons) {
+            button.setStyle("-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        }
+
+        for (Boolean bool: bools) {
+            bool = false;
+        }
+
         if (!btnOnes.isDisabled()) {
-            btnOnes.setText(String.valueOf(getOnesValue()));
+            btnOnes.setText(String.valueOf(onesInHand));
+        }
+
+        if (!btnTwos.isDisabled()) {
+            btnTwos.setText(String.valueOf(twosInHand * 2));
+        }
+
+        if (!btnThrees.isDisabled()) {
+            btnThrees.setText(String.valueOf(threesInHand * 3));
+        }
+
+        if (!btnFours.isDisabled()) {
+            btnFours.setText(String.valueOf(foursInHand * 4));
+        }
+
+        if (!btnFives.isDisabled()) {
+            btnFives.setText(String.valueOf(fivesInHand * 5));
+        }
+
+        if (!btnSixes.isDisabled()) {
+            btnSixes.setText(String.valueOf(sixesInHand * 6));
         }
     }
 
-    public void confirmSelection(ActionEvent actionEvent) {
-        handsLeft--;
-        rollsLeft = 3;
-        btnRollDice.setDisable(false);
-
-
+    public void firstDieClicked(ActionEvent actionEvent) {
+        if (!blnDieOneActive) {
+            blnDieOneActive = true;
+            btnFirstDie.setStyle("-fx-border-color: black;" + "-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        } else {
+            blnDieOneActive = false;
+            btnFirstDie.setStyle("-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        }
     }
 
-    public int getOnesValue() {
-        return onesInHand;
+    public void secondDieClicked(ActionEvent actionEvent) {
+        if (!blnDieTwoActive) {
+            blnDieTwoActive = true;
+            btnSecondDie.setStyle("-fx-border-color: black;" + "-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        } else {
+            blnDieTwoActive = false;
+            btnSecondDie.setStyle("-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        }
+    }
+
+    public void thirdDieClicked(ActionEvent actionEvent) {
+        if (!blnDieThreeActive) {
+            blnDieThreeActive = true;
+            btnThirdDie.setStyle("-fx-border-color: black;" + "-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        } else {
+            blnDieThreeActive = false;
+            btnThirdDie.setStyle("-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        }
+    }
+
+    public void fourthDieClicked(ActionEvent actionEvent) {
+        if (!blnDieFourActive) {
+            blnDieFourActive = true;
+            btnFourthDie.setStyle("-fx-border-color: black;" + "-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        } else {
+            blnDieFourActive = false;
+            btnFourthDie.setStyle("-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        }
+    }
+
+    public void fifthDieClicked(ActionEvent actionEvent) {
+        if (!blnDieFiveActive) {
+            blnDieFiveActive = true;
+            btnFifthDie.setStyle("-fx-border-color: black;" + "-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        } else {
+            blnDieFiveActive = false;
+            btnFifthDie.setStyle("-fx-background-color: transparent;" + "-fx-border-radius: 10 10 10 10");
+        }
     }
 
     public void clickedOnes(ActionEvent actionEvent) {
         btnOnes.setDisable(true);
         btnOnes.setStyle("-fx-text-fill: black");
+        handsLeft--;
+
+        btnRollDice.setDisable(false);
+        for (Button button: pointsButtons)
+            button.setDisable(true);
+
+        rollsLeft = 3;
+    }
+
+    public void clickedTwos(ActionEvent actionEvent) {
+        btnTwos.setDisable(true);
+        btnTwos.setStyle("-fx-text-fill: black");
+        handsLeft--;
+    }
+
+    public void clickedThrees(ActionEvent actionEvent) {
+        btnThrees.setDisable(true);
+        btnThrees.setStyle("-fx-text-fill: black");
+        handsLeft--;
+    }
+
+    public void clickedFours(ActionEvent actionEvent) {
+        btnFours.setDisable(true);
+        btnFours.setStyle("-fx-text-fill: black");
+        handsLeft--;
+    }
+
+    public void clickedFives(ActionEvent actionEvent) {
+        btnFives.setDisable(true);
+        btnFives.setStyle("-fx-text-fill: black");
+        handsLeft--;
+    }
+
+    public void clickedSixes(ActionEvent actionEvent) {
+        btnSixes.setDisable(true);
+        btnSixes.setStyle("-fx-text-fill: black");
         handsLeft--;
     }
 
