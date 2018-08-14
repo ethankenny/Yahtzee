@@ -102,6 +102,8 @@ public class mainForm
     ArrayList<Button> dieButtons = new ArrayList<Button>();
     ArrayList<Boolean> bools = new ArrayList<Boolean>();
 
+    ArrayList<Integer> cardsInHand = new ArrayList<Integer>();
+
     public static void main(String[] args) { }
 
     public void rollDice(ActionEvent actionEvent) {
@@ -110,6 +112,7 @@ public class mainForm
             Collections.addAll(pointsButtons, btnOnes, btnTwos, btnThrees, btnFours, btnFives, btnSixes, btn3OAK,
                     btn4OAK, btnFullHouse, btnSStraight, btnLStraight, btnYahtzee, btnChance);
             Collections.addAll(diePointsButtons, btnOnes, btnTwos, btnThrees, btnFours, btnFives, btnSixes);
+            Collections.addAll(cardsInHand, onesInHand, twosInHand, threesInHand, foursInHand, fivesInHand, sixesInHand);
         }
 
         if (rollsLeft == 3) {
@@ -234,6 +237,57 @@ public class mainForm
                 int3OAKPoints = (onesInHand) + (twosInHand * 2) + (threesInHand * 3) + (foursInHand * 4) + (fivesInHand * 5) + (sixesInHand * 6);
             }
             btn3OAK.setText(String.valueOf(int3OAKPoints));
+            int3OAKPoints = 0;
+        }
+
+        if (!btn4OAK.isDisabled()) {
+            if (onesInHand >= 4 || twosInHand >= 4 || threesInHand >= 4|| foursInHand >= 4 || fivesInHand >= 4 || sixesInHand >= 4) {
+                int4OAKPoints = (onesInHand) + (twosInHand * 2) + (threesInHand * 3) + (foursInHand * 4) + (fivesInHand * 5) + (sixesInHand * 6);
+            }
+            btn4OAK.setText(String.valueOf(int4OAKPoints));
+            int4OAKPoints = 0;
+        }
+
+        if (!btnFullHouse.isDisabled()) {
+            if (onesInHand == 3 || twosInHand == 3 || threesInHand == 3 || foursInHand == 3 || fivesInHand == 3 || sixesInHand == 3) {
+                if (onesInHand == 2 || twosInHand == 2 || threesInHand == 2 || foursInHand == 2 || fivesInHand == 2 || sixesInHand == 2) {
+                    intFullHousePoints = 25;
+                }
+            }
+            btnFullHouse.setText(String.valueOf(intFullHousePoints));
+            intFullHousePoints = 0;
+        }
+
+        if (!btnSStraight.isDisabled()) {
+            if ((onesInHand > 0 && twosInHand > 0 && threesInHand > 0 && foursInHand > 0) || (twosInHand > 0 && threesInHand > 0 && foursInHand > 0 && fivesInHand > 0) ||
+                    threesInHand > 0 && foursInHand > 0 && fivesInHand > 0 && sixesInHand > 0) {
+                intSmallStraightPoints = 30;
+            }
+            btnSStraight.setText(String.valueOf(intSmallStraightPoints));
+            intSmallStraightPoints = 0;
+        }
+
+        if (!btnLStraight.isDisabled()) {
+            if (twosInHand > 0 && threesInHand > 0 && foursInHand > 0 && fivesInHand > 0)
+                if (onesInHand > 0 || sixesInHand > 0)
+                    intLargeStraightPoints = 40;
+
+            btnLStraight.setText(String.valueOf(intLargeStraightPoints));
+            intLargeStraightPoints = 0;
+        }
+
+        if (!btnYahtzee.isDisabled()) {
+            if (onesInHand == 5 || twosInHand == 5 || threesInHand == 5|| foursInHand == 5 || fivesInHand == 5 || sixesInHand == 5) {
+                intYahtzeePoints = 50;
+            }
+            btnYahtzee.setText(String.valueOf(intYahtzeePoints));
+            intYahtzeePoints = 0;
+        }
+
+        if (!btnChance.isDisabled()) {
+            intChancePoints = (onesInHand) + (twosInHand * 2) + (threesInHand * 3) + (foursInHand * 4) + (fivesInHand * 5) + (sixesInHand * 6);
+            btnChance.setText(String.valueOf(intChancePoints));
+            intChancePoints = 0;
         }
     }
 
@@ -345,6 +399,70 @@ public class mainForm
         allButtonClicks();
     }
 
+    public void clicked4OAK(ActionEvent actionEvent) {
+        btn4OAK.setDisable(true);
+        btn4OAK.setStyle("-fx-text-fill: black");
+        if (onesInHand >= 4 || twosInHand >= 4 || threesInHand >= 4|| foursInHand >= 4 || fivesInHand >= 4 || sixesInHand >= 4) {
+            int4OAKPoints = (onesInHand) + (twosInHand * 2) + (threesInHand * 3) + (foursInHand * 4) + (fivesInHand * 5) + (sixesInHand * 6);
+        }
+
+        allButtonClicks();
+    }
+
+    public void clickedFullHouse(ActionEvent actionEvent) {
+        btnFullHouse.setDisable(true);
+        btnFullHouse.setStyle("-fx-text-fill: black");
+
+        if (onesInHand == 3 || twosInHand == 3 || threesInHand == 3 || foursInHand == 3 || fivesInHand == 3 || sixesInHand == 3) {
+            if (onesInHand == 2 || twosInHand == 2 || threesInHand == 2 || foursInHand == 2 || fivesInHand == 2 || sixesInHand == 2) {
+                intFullHousePoints = 25;
+            }
+        }
+
+        allButtonClicks();
+    }
+
+    public void clickedSmallStraight(ActionEvent actionEvent) {
+        btnSStraight.setDisable(true);
+        btnSStraight.setStyle("-fx-text-fill: black");
+
+        if ((onesInHand > 0 && twosInHand > 0 && threesInHand > 0 && foursInHand > 0) || (twosInHand > 0 && threesInHand > 0 && foursInHand > 0 && fivesInHand > 0) ||
+             threesInHand > 0 && foursInHand > 0 && fivesInHand > 0 && sixesInHand > 0) {
+            intSmallStraightPoints = 30;
+        }
+
+        allButtonClicks();
+    }
+
+    public void clickedLargeStraight(ActionEvent actionEvent) {
+        btnLStraight.setDisable(true);
+        btnLStraight.setStyle("-fx-text-fill: black");
+
+        if (twosInHand > 0 && threesInHand > 0 && foursInHand > 0 && fivesInHand > 0)
+            if (onesInHand > 0 || sixesInHand > 0)
+                intLargeStraightPoints = 40;
+
+        allButtonClicks();
+    }
+
+    public void clickedYahtzee(ActionEvent actionEvent) {
+        btnYahtzee.setDisable(true);
+        btnYahtzee.setStyle("-fx-text-fill: black");
+        if (onesInHand == 5 || twosInHand == 5 || threesInHand == 5|| foursInHand == 5 || fivesInHand == 5 || sixesInHand == 5) {
+            intYahtzeePoints = 50;
+        }
+
+        allButtonClicks();
+    }
+
+    public void clickedChance(ActionEvent actionEvent) {
+        btnChance.setDisable(true);
+        btnChance.setStyle("-fx-text-fill: black");
+        intChancePoints = (onesInHand) + (twosInHand * 2) + (threesInHand * 3) + (foursInHand * 4) + (fivesInHand * 5) + (sixesInHand * 6);
+
+        allButtonClicks();
+    }
+
     public void allButtonClicks() {
         for (Button button: pointsButtons) {
             button.setDisable(true);
@@ -373,7 +491,6 @@ public class mainForm
 
     public void bonusPointsUpdater() {
         intBonusPoints = 0;
-
         ArrayList<Integer> diePointValues = new ArrayList<Integer>();
         Collections.addAll(diePointValues, intOnePoints, intTwoPoints, intThreePoints, intFourPoints, intFivePoints, intSixPoints);
 

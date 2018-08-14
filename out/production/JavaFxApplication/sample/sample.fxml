@@ -40,7 +40,7 @@
             <Image url="@../Images/Dice_3.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtTotalPoints" alignment="TOP_CENTER" editable="false" layoutX="112.0" layoutY="7.0" prefHeight="49.0" prefWidth="208.0" style="-fx-background-color: #B2DFEE;" text="Total Points: 0" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="112.0">
+      <TextField fx:id="txtTotalPoints" alignment="TOP_CENTER" editable="false" layoutX="112.0" layoutY="7.0" prefHeight="49.0" prefWidth="287.0" style="-fx-background-color: #B2DFEE;" text="Total Points: 0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
          <font>
             <Font name="Calibri Bold" size="26.0" />
          </font>
@@ -150,37 +150,37 @@
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btn3OAK" onAction="#clicked3OAK" disable="true" layoutX="330.0" layoutY="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btn3OAK" disable="true" layoutX="330.0" layoutY="60.0" mnemonicParsing="false" onAction="#clicked3OAK" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btn4OAK" disable="true" layoutX="330.0" layoutY="126.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btn4OAK" disable="true" layoutX="330.0" layoutY="126.0" mnemonicParsing="false" onAction="#clicked4OAK" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnFullHouse" disable="true" layoutX="330.0" layoutY="192.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnFullHouse" disable="true" layoutX="330.0" layoutY="192.0" mnemonicParsing="false" onAction="#clickedFullHouse" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnSStraight" disable="true" layoutX="330.0" layoutY="258.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnSStraight" disable="true" layoutX="330.0" layoutY="258.0" mnemonicParsing="false" onAction="#clickedSmallStraight" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnLStraight" disable="true" layoutX="330.0" layoutY="324.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnLStraight" disable="true" layoutX="330.0" layoutY="324.0" mnemonicParsing="false" onAction="#clickedLargeStraight" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnYahtzee" disable="true" layoutX="330.0" layoutY="390.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnYahtzee" disable="true" layoutX="330.0" layoutY="390.0" mnemonicParsing="false" onAction="#clickedYahtzee" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnChance" disable="true" layoutX="330.0" layoutY="456.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnChance" disable="true" layoutX="330.0" layoutY="456.0" mnemonicParsing="false" onAction="#clickedChance" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
