@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaFxApplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFxApplication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/com/yahtzee/mainForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/com/yahtzee/mainForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/com/yahtzee/mainForm.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/sample/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yahtzee/mainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yahtzee/mainForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
@@ -66,11 +62,11 @@
     <session id="1589743565">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="4" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -85,14 +81,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="fxml" value="315" />
-          <entry key="java" value="3703" />
+          <entry key="fxml" value="339" />
+          <entry key="java" value="6325" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3703" />
-          <entry key="XML" value="315" />
+          <entry key="JAVA" value="6325" />
+          <entry key="XML" value="339" />
         </counts>
       </usages-collector>
     </session>
@@ -114,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="204">
               <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -126,10 +122,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yahtzee/mainForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="450">
+              <caret line="400" lean-forward="true" selection-start-line="400" selection-end-line="400" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#12112#12121#0" expanded="true" />
+                <element signature="e#12761#12770#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,23 +134,28 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2312">
-              <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
+            <state relative-caret-position="226">
+              <caret line="150" column="16" lean-forward="true" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>clickedon</find>
       <find>defaultdie</find>
       <find>clickedones</find>
       <find>clickedtwo</find>
       <find>handsl</find>
+      <find>blndieonea</find>
+      <find>btnfirs</find>
+      <find>bonuspointsup</find>
+      <find>clickedon</find>
+      <find>intbon</find>
+      <find>intbonus</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -176,7 +178,7 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1612" />
@@ -191,9 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,10 +217,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Yahtzee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yahtzee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,6 +241,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534280030978" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -353,7 +362,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.09701493" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.09914712" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -404,6 +413,14 @@
     <entry file="file://$PROJECT_DIR$/JavaFxApplication.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="150" column="16" lean-forward="true" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Yahtzee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -413,7 +430,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="204">
           <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -421,20 +438,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2312">
-          <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yahtzee/mainForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="450">
+          <caret line="400" lean-forward="true" selection-start-line="400" selection-end-line="400" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#12112#12121#0" expanded="true" />
+            <element signature="e#12761#12770#0" expanded="true" />
           </folding>
         </state>
       </provider>

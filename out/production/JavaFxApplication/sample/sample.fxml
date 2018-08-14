@@ -110,47 +110,47 @@
             <Font name="Calibri Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="466.0" prefHeight="49.0" prefWidth="63.0" text="Section&#10;Bonus:" textAlignment="CENTER">
+      <Label layoutX="49.0" layoutY="466.0" prefHeight="49.0" prefWidth="63.0" text="Section&#10;Bonus:" textAlignment="CENTER">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="txtBonusPoints" layoutX="113.0" layoutY="465.0" prefHeight="51.0" prefWidth="75.0" style="-fx-background-color: #B2DFEE;" text="0/63">
+      <TextField fx:id="txtBonusPoints" alignment="CENTER" layoutX="106.0" layoutY="465.0" prefHeight="51.0" prefWidth="91.0" style="-fx-background-color: #B2DFEE;" text="0/63">
          <font>
             <Font name="Calibri Bold" size="24.0" />
          </font>
       </TextField>
-      <Button fx:id="btnOnes" onAction="#clickedOnes" disable="true" layoutX="126.0" layoutY="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnOnes" disable="true" layoutX="126.0" layoutY="60.0" mnemonicParsing="false" onAction="#clickedOnes" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnTwos" onAction="#clickedTwos" disable="true" layoutX="126.0" layoutY="126.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnTwos" disable="true" layoutX="126.0" layoutY="126.0" mnemonicParsing="false" onAction="#clickedTwos" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnThrees" onAction="#clickedThrees" disable="true" layoutX="126.0" layoutY="193.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnThrees" disable="true" layoutX="126.0" layoutY="193.0" mnemonicParsing="false" onAction="#clickedThrees" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnFours" onAction="#clickedFours" disable="true" layoutX="126.0" layoutY="258.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnFours" disable="true" layoutX="126.0" layoutY="258.0" mnemonicParsing="false" onAction="#clickedFours" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnFives" onAction="#clickedFives" disable="true" layoutX="126.0" layoutY="324.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnFives" disable="true" layoutX="126.0" layoutY="324.0" mnemonicParsing="false" onAction="#clickedFives" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btnSixes" onAction="#clickedSixes" disable="true" layoutX="126.0" layoutY="390.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btnSixes" disable="true" layoutX="126.0" layoutY="390.0" mnemonicParsing="false" onAction="#clickedSixes" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btn3OAK" disable="true" layoutX="330.0" layoutY="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
+      <Button fx:id="btn3OAK" onAction="#clicked3OAK" disable="true" layoutX="330.0" layoutY="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-color: black;" textAlignment="CENTER" textFill="#419dbc">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
