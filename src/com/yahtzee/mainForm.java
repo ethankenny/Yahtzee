@@ -21,43 +21,15 @@ import java.util.Random;
 
 public class mainForm
 {
-
-    @FXML public ImageView imgOne;
-    @FXML public ImageView imgTwo;
-    @FXML public ImageView imgThree;
-    @FXML public ImageView imgFour;
-    @FXML public ImageView imgFive;
-    @FXML public Button btnRollDice;
-    @FXML public Button btnOnes;
-    @FXML public Button btnTwos;
-    @FXML public Button btnThrees;
-    @FXML public Button btnFours;
-    @FXML public Button btnFives;
-    @FXML public Button btnSixes;
-    @FXML public Button btn3OAK;
-    @FXML public Button btn4OAK;
-    @FXML public Button btnFullHouse;
-    @FXML public Button btnSStraight;
-    @FXML public Button btnLStraight;
-    @FXML public Button btnYahtzee;
-    @FXML public Button btnChance;
-    @FXML public Button btnFirstDie;
-    @FXML public Button btnSecondDie;
-    @FXML public Button btnThirdDie;
-    @FXML public Button btnFourthDie;
-    @FXML public Button btnFifthDie;
-    @FXML public ImageView defaultDieOne;
-    @FXML public ImageView defaultDieTwo;
-    @FXML public ImageView defaultDieThree;
-    @FXML public ImageView defaultDieFour;
-    @FXML public ImageView defaultDieFive;
-    @FXML public ImageView defaultDieSix;
-    @FXML public TextField txtBonusPoints;
-    @FXML public TextField txtTotalPoints;
-
-
+    @FXML public ImageView imgOne, imgTwo, imgThree, imgFour, imgFive;
+    @FXML public Button btnRollDice, btnOnes, btnTwos, btnThrees, btnFours, btnFives, btnSixes;
+    @FXML public Button btn3OAK, btn4OAK, btnFullHouse, btnSStraight, btnLStraight, btnYahtzee, btnChance;
+    @FXML public Button btnFirstDie, btnSecondDie, btnThirdDie, btnFourthDie, btnFifthDie;
+    @FXML public ImageView defaultDieOne, defaultDieTwo, defaultDieThree, defaultDieFour, defaultDieFive, defaultDieSix;
+    @FXML public TextField txtBonusPoints, txtTotalPoints;
 
     ArrayList<Button> pointsButtons = new ArrayList<Button>();
+    ArrayList<Button> dieButtons = new ArrayList<Button>();
     ArrayList<Button> diePointsButtons = new ArrayList<Button>();
 
     private JButton button1;
@@ -66,43 +38,13 @@ public class mainForm
 
     Random rand = new Random();
 
-    int intTotalPoints = 0;
-    int intOnePoints = 0;
-    int intTwoPoints = 0;
-    int intThreePoints = 0;
-    int intFourPoints = 0;
-    int intFivePoints = 0;
-    int intSixPoints = 0;
-    int int3OAKPoints = 0;
-    int int4OAKPoints = 0;
-    int intFullHousePoints = 0;
-    int intSmallStraightPoints = 0;
-    int intLargeStraightPoints = 0;
-    int intYahtzeePoints = 0;
-    int intChancePoints = 0;
-    int intBonusPoints = 0;
-
-    int turnOnClick = 0;
+    int intTotalPoints, intBonusPoints, intOnePoints, intTwoPoints, intThreePoints, intFourPoints, intFivePoints, intSixPoints = 0;
+    int int3OAKPoints, int4OAKPoints, intFullHousePoints, intSmallStraightPoints, intLargeStraightPoints, intYahtzeePoints, intChancePoints = 0;
     int handsLeft = 13;
     int rollsLeft = 3;
-    int onesInHand = 0;
-    int twosInHand = 0;
-    int threesInHand = 0;
-    int foursInHand = 0;
-    int fivesInHand = 0;
-    int sixesInHand = 0;
+    int onesInHand, twosInHand, threesInHand, foursInHand, fivesInHand, sixesInHand = 0;
 
-    Boolean blnDieOneActive = false;
-    Boolean blnDieTwoActive = false;
-    Boolean blnDieThreeActive = false;
-    Boolean blnDieFourActive = false;
-    Boolean blnDieFiveActive = false;
-    Boolean blnBonus = false;
-
-    ArrayList<Button> dieButtons = new ArrayList<Button>();
-    ArrayList<Boolean> bools = new ArrayList<Boolean>();
-
-    ArrayList<Integer> cardsInHand = new ArrayList<Integer>();
+    boolean blnDieOneActive, blnDieTwoActive, blnDieThreeActive, blnDieFourActive, blnDieFiveActive, blnBonus = false;
 
     public static void main(String[] args) { }
 
@@ -112,7 +54,6 @@ public class mainForm
             Collections.addAll(pointsButtons, btnOnes, btnTwos, btnThrees, btnFours, btnFives, btnSixes, btn3OAK,
                     btn4OAK, btnFullHouse, btnSStraight, btnLStraight, btnYahtzee, btnChance);
             Collections.addAll(diePointsButtons, btnOnes, btnTwos, btnThrees, btnFours, btnFives, btnSixes);
-            Collections.addAll(cardsInHand, onesInHand, twosInHand, threesInHand, foursInHand, fivesInHand, sixesInHand);
         }
 
         if (rollsLeft == 3) {
@@ -128,7 +69,6 @@ public class mainForm
             btnRollDice.setDisable(true);
 
         Collections.addAll(dieButtons, btnFirstDie, btnSecondDie, btnThirdDie, btnFourthDie, btnFifthDie);
-        Collections.addAll(bools, blnDieOneActive, blnDieTwoActive, blnDieThreeActive, blnDieFourActive, blnDieFiveActive);
 
         for (Button button: dieButtons) {
             button.setDisable(false);
@@ -143,12 +83,7 @@ public class mainForm
         Image priorImageFour = imgFour.getImage();
         Image priorImageFive = imgFive.getImage();
 
-        onesInHand = 0;
-        twosInHand = 0;
-        threesInHand = 0;
-        foursInHand = 0;
-        fivesInHand = 0;
-        sixesInHand = 0;
+        onesInHand = twosInHand = threesInHand = foursInHand = fivesInHand = sixesInHand = 0;
 
         for (ImageView image: pics) {
             int rNumber = rand.nextInt(6) + 1;
@@ -180,11 +115,7 @@ public class mainForm
             imgFive.setImage(priorImageFive);
         }
 
-        blnDieOneActive = false;
-        blnDieTwoActive = false;
-        blnDieThreeActive = false;
-        blnDieFourActive = false;
-        blnDieFiveActive = false;
+        blnDieOneActive = blnDieTwoActive = blnDieThreeActive = blnDieFourActive = blnDieFiveActive = false;
 
         for (ImageView image: pics) {
             String imageURL = image.getImage().impl_getUrl();
@@ -474,16 +405,11 @@ public class mainForm
         for (Button button: dieButtons)
             button.setDisable(true);
 
-        turnOnClick = 3 - rollsLeft;
         rollsLeft = 3;
         handsLeft--;
         btnRollDice.setDisable(false);
 
-        blnDieOneActive = false;
-        blnDieTwoActive = false;
-        blnDieThreeActive = false;
-        blnDieFourActive = false;
-        blnDieFiveActive = false;
+        blnDieOneActive = blnDieTwoActive = blnDieThreeActive = blnDieFourActive = blnDieFiveActive = false;
 
         bonusPointsUpdater();
         totalPointsUpdater();
