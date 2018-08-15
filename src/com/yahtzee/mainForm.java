@@ -1,19 +1,11 @@
 package com.yahtzee;
 
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-
-import com.sun.xml.internal.ws.commons.xmlutil.Converter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
-import sample.Main;
-import sample.Yahtzee;
-
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
